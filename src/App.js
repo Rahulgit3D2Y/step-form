@@ -6,7 +6,6 @@ import { Footer } from './Components/Footer';
 import { Header } from './Components/Header';
 import { Personal } from './Components/Personal';
 import { Plans } from './Components/Plans';
-import { Thankyou } from './Components/Thankyou';
 import { Nomatch } from './Components/Nomatch';
 function App() {
   return (
@@ -19,8 +18,7 @@ function App() {
             <Route path='/Finish/*' element={<Finish/>}/>
             <Route path='*' element={<Nomatch/>}/>
         </Routes>
-      <Thankyou/>
-
+    
       <Footer/>
     </div>
   );

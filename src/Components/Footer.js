@@ -1,7 +1,4 @@
 import { useNavigate } from "react-router-dom"
-import { AddOn } from "./AddOn"
-import { Plans } from "./Plans"
-
 export const Footer=()=>{
     const next=useNavigate()
     const back=useNavigate()
