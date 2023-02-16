@@ -7,6 +7,7 @@ import { Header } from './Components/Header';
 import { Personal } from './Components/Personal';
 import { Plans } from './Components/Plans';
 import { Thankyou } from './Components/Thankyou';
+import { Nomatch } from './Components/Nomatch';
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
             <Route path='/Plans/*' element={<Plans/>}/>
             <Route path='/AddOn/*' element={<AddOn/>} />
             <Route path='/Finish/*' element={<Finish/>}/>
+            <Route path='*' element={<Nomatch/>}/>
         </Routes>
       <Thankyou/>
 
