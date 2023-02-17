@@ -20,11 +20,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+body
+{
+  background-color: var(--Lightgray);
+}
 .App
 {
   display: grid;
   place-items: center;
-  min-height: 100vh;
   background-color: var(--Lightgray);
   min-width: 375px;
 }
@@ -54,7 +57,7 @@ header button:focus
   color: var(--Purplishblue);
   border: none;
 }
-.personal
+.personal,.plans
 {
   display: flex;
   flex-direction: column;
@@ -62,11 +65,16 @@ header button:focus
   border-radius: 1rem;
   width: 350px;
   padding: 10px 30px;
-  height: 375px;
+  height:400px;
   background-color: white;
   /*box-shadow: #2196F3 1px 1px 10px;*/
   position: relative;
   top: -70px;
+  gap: 20px;
+}
+.plans
+{
+  height: 500px;
 }
 form{
   display: flex;
@@ -107,14 +115,14 @@ footer
   background-color: white;
   display: flex;
   width: 375px;
-  height: 100px;
   justify-content: space-around;
   gap: 100px;
+  
 }
 footer button
 {
   background-color: var(--Marineblue);
-  padding: 0 20px;
+  padding: 10px 20px;
   margin: 30px 0;
   border-radius: 5px;
   color: white;
@@ -125,60 +133,44 @@ footer button:nth-child(1)
   background-color: transparent;
   border: none;
 }
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
+
+
+.plan-offers
+{
+  gap: 10px;
+}
+.pmonth ,.pyearly
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pyearly img{
+  height: 50px;
+  width: 50px;
+}
+.arcade,.pro,.advanced
+{
+  display: flex;
+  gap: 20px;
+  border: 1px solid var(--Lightgray);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+
+.arcade:active,.pro:active,.advanced:active
+{
+  background-color: var(--Purplishblue);
+  cursor: pointer;
+}
+.switch 
+{
+    display: flex;
+    justify-content: center;
+    background-color: var(--Alabaster);
+    padding: 10px 20px;
+    border-radius: 8px;
   }
   
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
   
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
