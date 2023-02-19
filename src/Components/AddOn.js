@@ -4,7 +4,7 @@ import { AddOnYearly } from "./AddOnYearly"
 
 export const AddOn=()=>{
     return(
-        <>
+        <div className="addon">
             <h1>pick add-ons</h1>
             <p>Add-ons help enhance your gaming experience.</p>
             <div className="benefits">
@@ -16,6 +16,6 @@ export const AddOn=()=>{
                 <Link to="AddOnMonthly">1</Link>
                 <Link to="AddOnYearly">2</Link>
             </div>
-        </>
+        </div>
     )
 }

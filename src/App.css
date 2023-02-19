@@ -57,7 +57,7 @@ header button:focus
   color: var(--Purplishblue);
   border: none;
 }
-.personal,.plans
+.personal,.plans,.addon
 {
   display: flex;
   flex-direction: column;
@@ -127,12 +127,12 @@ footer button
   border-radius: 5px;
   color: white;
 }
-footer button:nth-child(1)
+/*footer button:nth-child(1)
 {
   color: transparent;
   background-color: transparent;
   border: none;
-}
+}*/
 
 
 .plan-offers
@@ -172,5 +172,35 @@ footer button:nth-child(1)
     padding: 10px 20px;
     border-radius: 8px;
   }
-  
-  
+  .amonthly,.ayearly
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .amonthly>div,.ayearly>div
+  {
+    display: flex;
+    border: 2px var(--Lightgray) solid;
+    justify-content: space-around;
+    border-radius: 8px;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+  }
+  .amonthly input,.ayearly input
+  {
+   width: auto;
+  }
+  .amonthly h4,.ayearly h4
+  {
+    color: var(--Purplishblue);
+  }
+  .amonthly p,.ayearly p
+  {
+    color: var(--Pastelblue);
+  }
+  .amonthly>div:hover,.ayearly>div:hover
+  {
+    cursor: pointer;
+  }
